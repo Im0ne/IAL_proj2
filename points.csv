@@ -1,0 +1,74 @@
+hashtable,Test 1,0.25
+hashtable,Test 2,0.25
+hashtable,Test 3,0.25
+hashtable,Test 4,0.25
+hashtable,Test 5,0.25
+hashtable,Test 6,0.25
+hashtable,Test 7,0.25
+hashtable,Test 8,0.25
+hashtable,Test 9,0.25
+hashtable,Test 10,0.25
+hashtable,Test 11,0.25
+hashtable,memcheck-11,0.25
+btree-iter,Test 1,0.08
+btree-iter,Test 2,0.08
+btree-iter,Test 3,0.08
+btree-iter,Test 4,0.08
+btree-iter,Test 5,0.08
+btree-iter,Test 6,0.08
+btree-iter,Test 7,0.08
+btree-iter,Test 8,0.08
+btree-iter,Test 9,0.08
+btree-iter,Test 10,0.08
+btree-iter,Test 11,0.08
+btree-iter,Test 12,0.08
+btree-iter,Test 13,0.08
+btree-iter,Test 14,0.08
+btree-iter,Test 15,0.08
+btree-iter,Test 16,0.08
+btree-iter,Test 17,0.08
+btree-iter,Test 18,0.08
+btree-iter,Test 19,0.08
+btree-iter,Test 20,0.08
+btree-iter,Test 21,0.08
+btree-iter,Test 22,0.08
+btree-iter,Test 23,0.08
+btree-iter,Test 24,0.08
+btree-iter,Test 25,0.08
+btree-exa,Test 26,0.3
+btree-exa,Test 27,0.3
+btree-iter,memcheck-11,0.25
+btree-iter,memcheck-22,0.25
+btree-exa,memcheck-26,0.2
+btree-exa,memcheck-27,0.2
+btree-rec,Test 1,0.08
+btree-rec,Test 2,0.08
+btree-rec,Test 3,0.08
+btree-rec,Test 4,0.08
+btree-rec,Test 5,0.08
+btree-rec,Test 6,0.08
+btree-rec,Test 7,0.08
+btree-rec,Test 8,0.08
+btree-rec,Test 9,0.08
+btree-rec,Test 10,0.08
+btree-rec,Test 11,0.08
+btree-rec,Test 12,0.08
+btree-rec,Test 13,0.08
+btree-rec,Test 14,0.08
+btree-rec,Test 15,0.08
+btree-rec,Test 16,0.08
+btree-rec,Test 17,0.08
+btree-rec,Test 18,0.08
+btree-rec,Test 19,0.08
+btree-rec,Test 20,0.08
+btree-rec,Test 21,0.08
+btree-rec,Test 22,0.08
+btree-rec,Test 23,0.08
+btree-rec,Test 24,0.08
+btree-rec,Test 25,0.08
+btree-exa,Test 26,0.3
+btree-exa,Test 27,0.3
+btree-rec,memcheck-11,0.25
+btree-rec,memcheck-22,0.25
+btree-exa,memcheck-26,0.2
+btree-exa,memcheck-27,0.2

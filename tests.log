@@ -1,0 +1,2124 @@
+[unpack.log]
+Upacking file: ./xonufr00.tar of type application/x-tar
+x btree/
+x btree/exa/
+x btree/exa/exa.c
+x btree/iter/
+x btree/iter/btree.c
+x btree/rec/
+x btree/rec/btree.c
+x hashtable/
+x hashtable/hashtable.c
+[hashtable-compilation.log]
+gcc -Wall -std=c11 -pedantic -o hashtable/test hashtable/hashtable.c hashtable/test_advanced.c hashtable/test_util.c
+[hashtable-1.log]
+[test_table_init] Initialize the table
+[PASS]
+
+------------HASH TABLE--------------
+0: 
+1: 
+2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
+10: 
+11: 
+12: 
+------------------------------------
+Total items in hash table: 0
+Maximum hash collisions: 0
+------------------------------------
+
+[hashtable-2.log]
+[test_search_nonexist] Search for a non-existing item
+[PASS]
+
+------------HASH TABLE--------------
+0: 
+1: 
+2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
+10: 
+11: 
+12: 
+------------------------------------
+Total items in hash table: 0
+Maximum hash collisions: 0
+------------------------------------
+
+[hashtable-3.log]
+[test_insert_simple] Insert a new item
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3208.67)
+1: 
+2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
+10: 
+11: 
+12: 
+------------------------------------
+Total items in hash table: 1
+Maximum hash collisions: 0
+------------------------------------
+
+[hashtable-4.log]
+[test_search_exist] Search for an existing item
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3208.67)
+1: 
+2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
+10: 
+11: 
+12: 
+------------------------------------
+Total items in hash table: 1
+Maximum hash collisions: 0
+------------------------------------
+
+[hashtable-5.log]
+[test_insert_many] Insert many new items
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3208.67)
+1: 
+2: 
+3: (Avalanche,47.03)(Uniswap,21.68)(Dogecoin,0.22)
+4: (Chainlink,21.90)(Terra,30.67)(XRP,0.93)
+5: (Litecoin,156.87)
+6: 
+7: 
+8: (Cardano,1.82)
+9: (Solana,134.50)(Binance Coin,409.15)
+10: (Tether,0.86)
+11: (Bitcoin,53247.71)
+12: (USD Coin,0.86)(Polkadot,34.99)
+------------------------------------
+Total items in hash table: 15
+Maximum hash collisions: 2
+------------------------------------
+
+[hashtable-6.log]
+[test_insert_collision] Check that item with a colliding hash is inserted at the beginning
+[PASS]
+
+------------HASH TABLE--------------
+0: (Dthereun,0.10)(Ethereum,3208.67)
+1: 
+2: 
+3: (Avalanche,47.03)(Uniswap,21.68)(Dogecoin,0.22)
+4: (Chainlink,21.90)(Terra,30.67)(XRP,0.93)
+5: (Litecoin,156.87)
+6: 
+7: 
+8: (Cardano,1.82)
+9: (Solana,134.50)(Binance Coin,409.15)
+10: (Tether,0.86)
+11: (Bitcoin,53247.71)
+12: (USD Coin,0.86)(Polkadot,34.99)
+------------------------------------
+Total items in hash table: 16
+Maximum hash collisions: 2
+------------------------------------
+
+[hashtable-7.log]
+[test_search_collision] Search for an item with colliding hash
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3208.67)
+1: 
+2: 
+3: (Avalanche,47.03)(Uniswap,21.68)(Dogecoin,0.22)
+4: (Chainlink,21.90)(Terra,30.67)(XRP,0.93)
+5: (Litecoin,156.87)
+6: 
+7: 
+8: (Cardano,1.82)
+9: (Solana,134.50)(Binance Coin,409.15)
+10: (Tether,0.86)
+11: (Bitcoin,53247.71)
+12: (USD Coin,0.86)(Polkadot,34.99)
+------------------------------------
+Total items in hash table: 15
+Maximum hash collisions: 2
+------------------------------------
+
+[hashtable-8.log]
+[test_insert_update] Update an item
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3218.67)
+1: 
+2: 
+3: (Avalanche,47.03)(Uniswap,21.68)(Dogecoin,0.22)
+4: (Chainlink,21.90)(Terra,30.67)(XRP,0.93)
+5: (Litecoin,156.87)
+6: 
+7: 
+8: (Cardano,1.82)
+9: (Solana,134.50)(Binance Coin,409.15)
+10: (Tether,0.86)
+11: (Bitcoin,53247.71)
+12: (USD Coin,0.86)(Polkadot,34.99)
+------------------------------------
+Total items in hash table: 15
+Maximum hash collisions: 2
+------------------------------------
+
+[hashtable-9.log]
+[test_get] Get an item's value
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3208.67)
+1: 
+2: 
+3: (Avalanche,47.03)(Uniswap,21.68)(Dogecoin,0.22)
+4: (Chainlink,21.90)(Terra,30.67)(XRP,0.93)
+5: (Litecoin,156.87)
+6: 
+7: 
+8: (Cardano,1.82)
+9: (Solana,134.50)(Binance Coin,409.15)
+10: (Tether,0.86)
+11: (Bitcoin,53247.71)
+12: (USD Coin,0.86)(Polkadot,34.99)
+------------------------------------
+Total items in hash table: 15
+Maximum hash collisions: 2
+------------------------------------
+
+[hashtable-10.log]
+[test_delete] Delete an item
+[PASS]
+
+------------HASH TABLE--------------
+0: (Ethereum,3208.67)
+1: 
+2: 
+3: (Avalanche,47.03)(Uniswap,21.68)(Dogecoin,0.22)
+4: (Chainlink,21.90)(XRP,0.93)
+5: (Litecoin,156.87)
+6: 
+7: 
+8: (Cardano,1.82)
+9: (Solana,134.50)(Binance Coin,409.15)
+10: (Tether,0.86)
+11: (Bitcoin,53247.71)
+12: (USD Coin,0.86)(Polkadot,34.99)
+------------------------------------
+Total items in hash table: 14
+Maximum hash collisions: 2
+------------------------------------
+
+[hashtable-11.log]
+[test_delete_all] Delete all the items
+[PASS]
+
+------------HASH TABLE--------------
+0: 
+1: 
+2: 
+3: 
+4: 
+5: 
+6: 
+7: 
+8: 
+9: 
+10: 
+11: 
+12: 
+------------------------------------
+Total items in hash table: 0
+Maximum hash collisions: 0
+------------------------------------
+
+[hashtable-memcheck-11.log]
+==9299== Memcheck, a memory error detector
+==9299== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9299== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9299== Command: ./test 11
+==9299== 
+==9299== 
+==9299== HEAP SUMMARY:
+==9299==     in use at exit: 4,096 bytes in 1 blocks
+==9299==   total heap usage: 18 allocs, 17 frees, 5,288 bytes allocated
+==9299== 
+==9299== LEAK SUMMARY:
+==9299==    definitely lost: 0 bytes in 0 blocks
+==9299==    indirectly lost: 0 bytes in 0 blocks
+==9299==      possibly lost: 0 bytes in 0 blocks
+==9299==    still reachable: 0 bytes in 0 blocks
+==9299==         suppressed: 4,096 bytes in 1 blocks
+==9299== 
+==9299== For lists of detected and suppressed errors, rerun with: -s
+==9299== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-iter-compilation.log]
+gcc -Wall -std=c11 -pedantic -o btree/iter/test btree/test_advanced.c btree/test_util_advanced.c btree/iter/btree.c btree/iter/stack.c btree/exa/exa.c
+[btree-iter-1.log]
+[test_tree_init] Initialize the tree
+[PASS]
+
+[btree-iter-2.log]
+[test_tree_dispose_empty] Dispose the tree
+[PASS]
+
+[btree-iter-3.log]
+[test_tree_search_empty] Search in an empty tree (A)
+[PASS]
+
+[btree-iter-4.log]
+[test_tree_search_empty_result] Search in an empty tree (A) and check the result
+[PASS]
+
+[btree-iter-5.log]
+[test_tree_insert_root_node] Insert an item (H,1)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-iter-6.log]
+[test_tree_insert_root_values] Insert an item (H,1)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-iter-7.log]
+[test_tree_insert_root_children] Insert an item (H,1)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-iter-8.log]
+[test_tree_search_root] Search in a single node tree (H)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-iter-9.log]
+[test_tree_search_root_result] Search in a single node tree (H)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-iter-10.log]
+[test_tree_update_root] Update a node in a single node tree (H,1)->(H,8)
+Binary tree structure:
+
+  +-[H,1]
+
+[PASS]
+Binary tree structure:
+
+  +-[H,8]
+
+
+[btree-iter-11.log]
+[test_tree_insert_many] Insert many values
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-12.log]
+[test_tree_search] Search for an item deeper in the tree (A)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-13.log]
+[test_tree_search_result] Search for an item deeper in the tree (A)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-14.log]
+[test_tree_search_missing] Search for a missing key (X)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-15.log]
+[test_tree_search_missing_result] Search for a missing key (X)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-16.log]
+[test_tree_delete_leaf] Delete a leaf node (A)
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+
+
+[btree-iter-17.log]
+[test_tree_delete_left_subtree] Delete a node with only left subtree (R)
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[Q,10]
+              |     |
+              |     +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-18.log]
+[test_tree_delete_right_subtree] Delete a node with only right subtree (X)
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+                 +-[Y,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-19.log]
+[test_tree_delete_both_subtrees] Delete a node with both subtrees (L)
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[K,11]
+     |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-20.log]
+[test_tree_delete_missing] Delete a node that doesn't exist (U)
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-21.log]
+[test_tree_delete_root] Delete the root node (H)
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[G,7]
+     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-iter-22.log]
+[test_tree_dispose_filled] Dispose the whole tree
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+Tree is empty
+
+
+[btree-iter-23.log]
+[test_tree_preorder] Traverse the tree using preorder
+[PASS]
+Expected [D][B][A][C][E] got [D][B][A][C][E]
+Binary tree structure:
+
+     +-[E,5]
+     |
+  +-[D,1]
+     |
+     |  +-[C,4]
+     |  |
+     +-[B,2]
+        |
+        +-[A,3]
+
+
+[btree-iter-24.log]
+[test_tree_inorder] Traverse the tree using inorder
+[PASS]
+Expected [A][B][C][D][E] got [A][B][C][D][E]
+Binary tree structure:
+
+     +-[E,5]
+     |
+  +-[D,1]
+     |
+     |  +-[C,4]
+     |  |
+     +-[B,2]
+        |
+        +-[A,3]
+
+
+[btree-iter-25.log]
+[test_tree_postorder] Traverse the tree using postorder
+[PASS]
+Expected [A][C][B][E][D] got [A][C][B][E][D]
+Binary tree structure:
+
+     +-[E,5]
+     |
+  +-[D,1]
+     |
+     |  +-[C,4]
+     |  |
+     +-[B,2]
+        |
+        +-[A,3]
+
+
+[btree-exa-26.log]
+[test_letter_count] Count letters
+[PASS]
+Expected [ ][_][a][b][c][d][e][f] got [ ][_][a][b][c][d][e][f]
+Traversed items:
+[ ,5][_,7][a,3][b,4][c,7][d,3][e,3][f,7]
+
+[btree-exa-27.log]
+[test_balance] Balance tree
+[PASS]
+Expected [b][_][ ][a][d][c][e] got [b][_][ ][a][d][c][e]
+Binary tree structure:
+
+        +-[e,3]
+        |
+     +-[d,3]
+     |  |
+     |  +-[c,7]
+     |
+  +-[b,4]
+     |
+     |  +-[a,3]
+     |  |
+     +-[_,7]
+        |
+        +-[ ,5]
+
+
+[btree-iter-memcheck-11.log]
+==9409== Memcheck, a memory error detector
+==9409== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9409== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9409== Command: ./test 11
+==9409== 
+==9409== 
+==9409== HEAP SUMMARY:
+==9409==     in use at exit: 4,096 bytes in 1 blocks
+==9409==   total heap usage: 47 allocs, 46 frees, 4,796 bytes allocated
+==9409== 
+==9409== LEAK SUMMARY:
+==9409==    definitely lost: 0 bytes in 0 blocks
+==9409==    indirectly lost: 0 bytes in 0 blocks
+==9409==      possibly lost: 0 bytes in 0 blocks
+==9409==    still reachable: 0 bytes in 0 blocks
+==9409==         suppressed: 4,096 bytes in 1 blocks
+==9409== 
+==9409== For lists of detected and suppressed errors, rerun with: -s
+==9409== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-iter-memcheck-22.log]
+==9417== Memcheck, a memory error detector
+==9417== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9417== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9417== Command: ./test 22
+==9417== 
+==9417== 
+==9417== HEAP SUMMARY:
+==9417==     in use at exit: 4,096 bytes in 1 blocks
+==9417==   total heap usage: 47 allocs, 46 frees, 4,796 bytes allocated
+==9417== 
+==9417== LEAK SUMMARY:
+==9417==    definitely lost: 0 bytes in 0 blocks
+==9417==    indirectly lost: 0 bytes in 0 blocks
+==9417==      possibly lost: 0 bytes in 0 blocks
+==9417==    still reachable: 0 bytes in 0 blocks
+==9417==         suppressed: 4,096 bytes in 1 blocks
+==9417== 
+==9417== For lists of detected and suppressed errors, rerun with: -s
+==9417== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-exa-memcheck-26.log]
+==9426== Memcheck, a memory error detector
+==9426== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9426== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9426== Command: ./test 26
+==9426== 
+==9426== 
+==9426== HEAP SUMMARY:
+==9426==     in use at exit: 4,096 bytes in 1 blocks
+==9426==   total heap usage: 42 allocs, 41 frees, 5,112 bytes allocated
+==9426== 
+==9426== LEAK SUMMARY:
+==9426==    definitely lost: 0 bytes in 0 blocks
+==9426==    indirectly lost: 0 bytes in 0 blocks
+==9426==      possibly lost: 0 bytes in 0 blocks
+==9426==    still reachable: 0 bytes in 0 blocks
+==9426==         suppressed: 4,096 bytes in 1 blocks
+==9426== 
+==9426== For lists of detected and suppressed errors, rerun with: -s
+==9426== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-exa-memcheck-27.log]
+==9429== Memcheck, a memory error detector
+==9429== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9429== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9429== Command: ./test 27
+==9429== 
+==9429== 
+==9429== HEAP SUMMARY:
+==9429==     in use at exit: 4,096 bytes in 1 blocks
+==9429==   total heap usage: 25 allocs, 24 frees, 4,508 bytes allocated
+==9429== 
+==9429== LEAK SUMMARY:
+==9429==    definitely lost: 0 bytes in 0 blocks
+==9429==    indirectly lost: 0 bytes in 0 blocks
+==9429==      possibly lost: 0 bytes in 0 blocks
+==9429==    still reachable: 0 bytes in 0 blocks
+==9429==         suppressed: 4,096 bytes in 1 blocks
+==9429== 
+==9429== For lists of detected and suppressed errors, rerun with: -s
+==9429== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-rec-compilation.log]
+gcc -Wall -std=c11 -pedantic -o btree/rec/test btree/test_advanced.c btree/test_util_advanced.c btree/rec/btree.c btree/exa/exa.c
+[btree-rec-1.log]
+[test_tree_init] Initialize the tree
+[PASS]
+
+[btree-rec-2.log]
+[test_tree_dispose_empty] Dispose the tree
+[PASS]
+
+[btree-rec-3.log]
+[test_tree_search_empty] Search in an empty tree (A)
+[PASS]
+
+[btree-rec-4.log]
+[test_tree_search_empty_result] Search in an empty tree (A) and check the result
+[PASS]
+
+[btree-rec-5.log]
+[test_tree_insert_root_node] Insert an item (H,1)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-rec-6.log]
+[test_tree_insert_root_values] Insert an item (H,1)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-rec-7.log]
+[test_tree_insert_root_children] Insert an item (H,1)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-rec-8.log]
+[test_tree_search_root] Search in a single node tree (H)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-rec-9.log]
+[test_tree_search_root_result] Search in a single node tree (H)
+[PASS]
+Binary tree structure:
+
+  +-[H,1]
+
+
+[btree-rec-10.log]
+[test_tree_update_root] Update a node in a single node tree (H,1)->(H,8)
+Binary tree structure:
+
+  +-[H,1]
+
+[PASS]
+Binary tree structure:
+
+  +-[H,8]
+
+
+[btree-rec-11.log]
+[test_tree_insert_many] Insert many values
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-12.log]
+[test_tree_search] Search for an item deeper in the tree (A)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-13.log]
+[test_tree_search_result] Search for an item deeper in the tree (A)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-14.log]
+[test_tree_search_missing] Search for a missing key (X)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-15.log]
+[test_tree_search_missing_result] Search for a missing key (X)
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-16.log]
+[test_tree_delete_leaf] Delete a leaf node (A)
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+
+
+[btree-rec-17.log]
+[test_tree_delete_left_subtree] Delete a node with only left subtree (R)
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[Q,10]
+              |     |
+              |     +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-18.log]
+[test_tree_delete_right_subtree] Delete a node with only right subtree (X)
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+                 +-[Y,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-19.log]
+[test_tree_delete_both_subtrees] Delete a node with both subtrees (L)
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+                    +-[Y,10]
+                    |
+                 +-[X,10]
+                 |
+              +-[S,10]
+              |  |
+              |  +-[R,10]
+              |     |
+              |     +-[Q,10]
+              |        |
+              |        +-[P,10]
+              |
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[K,11]
+     |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-20.log]
+[test_tree_delete_missing] Delete a node that doesn't exist (U)
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-21.log]
+[test_tree_delete_root] Delete the root node (H)
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[G,7]
+     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+
+[btree-rec-22.log]
+[test_tree_dispose_filled] Dispose the whole tree
+Binary tree structure:
+
+           +-[O,16]
+           |
+        +-[N,14]
+        |  |
+        |  +-[M,13]
+        |
+     +-[L,12]
+     |  |
+     |  |  +-[K,11]
+     |  |  |
+     |  +-[J,10]
+     |     |
+     |     +-[I,9]
+     |
+  +-[H,8]
+     |
+     |     +-[G,7]
+     |     |
+     |  +-[F,6]
+     |  |  |
+     |  |  +-[E,5]
+     |  |
+     +-[D,4]
+        |
+        |  +-[C,3]
+        |  |
+        +-[B,2]
+           |
+           +-[A,1]
+
+[PASS]
+Binary tree structure:
+
+Tree is empty
+
+
+[btree-rec-23.log]
+[test_tree_preorder] Traverse the tree using preorder
+[PASS]
+Expected [D][B][A][C][E] got [D][B][A][C][E]
+Binary tree structure:
+
+     +-[E,5]
+     |
+  +-[D,1]
+     |
+     |  +-[C,4]
+     |  |
+     +-[B,2]
+        |
+        +-[A,3]
+
+
+[btree-rec-24.log]
+[test_tree_inorder] Traverse the tree using inorder
+[PASS]
+Expected [A][B][C][D][E] got [A][B][C][D][E]
+Binary tree structure:
+
+     +-[E,5]
+     |
+  +-[D,1]
+     |
+     |  +-[C,4]
+     |  |
+     +-[B,2]
+        |
+        +-[A,3]
+
+
+[btree-rec-25.log]
+[test_tree_postorder] Traverse the tree using postorder
+[PASS]
+Expected [A][C][B][E][D] got [A][C][B][E][D]
+Binary tree structure:
+
+     +-[E,5]
+     |
+  +-[D,1]
+     |
+     |  +-[C,4]
+     |  |
+     +-[B,2]
+        |
+        +-[A,3]
+
+
+[btree-exa-26.log]
+[test_letter_count] Count letters
+[PASS]
+Expected [ ][_][a][b][c][d][e][f] got [ ][_][a][b][c][d][e][f]
+Traversed items:
+[ ,5][_,7][a,3][b,4][c,7][d,3][e,3][f,7]
+
+[btree-exa-27.log]
+[test_balance] Balance tree
+[PASS]
+Expected [b][_][ ][a][d][c][e] got [b][_][ ][a][d][c][e]
+Binary tree structure:
+
+        +-[e,3]
+        |
+     +-[d,3]
+     |  |
+     |  +-[c,7]
+     |
+  +-[b,4]
+     |
+     |  +-[a,3]
+     |  |
+     +-[_,7]
+        |
+        +-[ ,5]
+
+
+[btree-rec-memcheck-11.log]
+==9538== Memcheck, a memory error detector
+==9538== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9538== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9538== Command: ./test 11
+==9538== 
+==9538== 
+==9538== HEAP SUMMARY:
+==9538==     in use at exit: 4,096 bytes in 1 blocks
+==9538==   total heap usage: 47 allocs, 46 frees, 4,796 bytes allocated
+==9538== 
+==9538== LEAK SUMMARY:
+==9538==    definitely lost: 0 bytes in 0 blocks
+==9538==    indirectly lost: 0 bytes in 0 blocks
+==9538==      possibly lost: 0 bytes in 0 blocks
+==9538==    still reachable: 0 bytes in 0 blocks
+==9538==         suppressed: 4,096 bytes in 1 blocks
+==9538== 
+==9538== For lists of detected and suppressed errors, rerun with: -s
+==9538== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-rec-memcheck-22.log]
+==9550== Memcheck, a memory error detector
+==9550== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9550== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9550== Command: ./test 22
+==9550== 
+==9550== 
+==9550== HEAP SUMMARY:
+==9550==     in use at exit: 4,096 bytes in 1 blocks
+==9550==   total heap usage: 47 allocs, 46 frees, 4,796 bytes allocated
+==9550== 
+==9550== LEAK SUMMARY:
+==9550==    definitely lost: 0 bytes in 0 blocks
+==9550==    indirectly lost: 0 bytes in 0 blocks
+==9550==      possibly lost: 0 bytes in 0 blocks
+==9550==    still reachable: 0 bytes in 0 blocks
+==9550==         suppressed: 4,096 bytes in 1 blocks
+==9550== 
+==9550== For lists of detected and suppressed errors, rerun with: -s
+==9550== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-exa-memcheck-26.log]
+==9563== Memcheck, a memory error detector
+==9563== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9563== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9563== Command: ./test 26
+==9563== 
+==9563== 
+==9563== HEAP SUMMARY:
+==9563==     in use at exit: 4,096 bytes in 1 blocks
+==9563==   total heap usage: 11 allocs, 10 frees, 4,368 bytes allocated
+==9563== 
+==9563== LEAK SUMMARY:
+==9563==    definitely lost: 0 bytes in 0 blocks
+==9563==    indirectly lost: 0 bytes in 0 blocks
+==9563==      possibly lost: 0 bytes in 0 blocks
+==9563==    still reachable: 0 bytes in 0 blocks
+==9563==         suppressed: 4,096 bytes in 1 blocks
+==9563== 
+==9563== For lists of detected and suppressed errors, rerun with: -s
+==9563== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+[btree-exa-memcheck-27.log]
+==9571== Memcheck, a memory error detector
+==9571== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==9571== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==9571== Command: ./test 27
+==9571== 
+==9571== 
+==9571== HEAP SUMMARY:
+==9571==     in use at exit: 4,096 bytes in 1 blocks
+==9571==   total heap usage: 25 allocs, 24 frees, 4,508 bytes allocated
+==9571== 
+==9571== LEAK SUMMARY:
+==9571==    definitely lost: 0 bytes in 0 blocks
+==9571==    indirectly lost: 0 bytes in 0 blocks
+==9571==      possibly lost: 0 bytes in 0 blocks
+==9571==    still reachable: 0 bytes in 0 blocks
+==9571==         suppressed: 4,096 bytes in 1 blocks
+==9571== 
+==9571== For lists of detected and suppressed errors, rerun with: -s
+==9571== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
